@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <P >Tính Điểm Trung Bình 3 môn</P>
+    <input type="text" id="Physical" placeholder="Điểm Vật Lý">
+    <input type="text" id="chemistry" placeholder="Điểm Hóa Học">
+    <input type="text" id="biology" placeholder="Điểm Sinh Học">
+    <button onclick="trungbinhmon()">Tính điểm</button>
+    <br>
+    <input type="text" readonly id="output" placeholder="Tông Điểm 3 môn" >
+    <input type="text" readonly id="output1" placeholder="Điểm Trung Bình">
+</div>
+<script>
+    function trungbinhmon(){
+        var a= document.getElementById("Physical").value//getElementById:trả về phần tử có thuộc tính ID là giá trị được chỉ định.
+        var b= document.getElementById("chemistry").value
+        var c= document.getElementById("biology").value
+        var avg = (parseFloat(a) + parseFloat(b) +parseFloat(c) ) /3//
+        var S = (parseFloat(a) + parseFloat(b) +parseFloat(c) )
+       document.getElementById('output').value = avg;
+       document.getElementById('output1').value = S;
+//placeholder:chữ trong ô
+    }
+</script>
+<br><hr>
+<!--Bai2-->
+<div >
+    <P >Đổi nhiệt độ</P>
+    <input type="text" id="độ C" placeholder="Nhập độ C">
+    <button onclick="tempSubect()">Đổi</button>
+    <br>
+    <input type="text" readonly id="output2" placeholder="Nhiệt Độ F" style="margin-top: 12px;">
+</div>
+<script>
+    function tempSubect(){
+        var T= document.getElementById("độ C").value.trim()
+        var S = (((parseFloat(T)*9)/5)+32 )
+        document.getElementById('output2').value = S;
+    }
+</script>
+</html>
